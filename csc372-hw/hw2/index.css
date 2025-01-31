@@ -1,0 +1,38 @@
+body {
+    background-color: white;
+    color: #404040;
+    font-family: Georgia, Garamond, serif;
+    font-size: 11pt;
+}
+
+a {
+    color: #A4A400;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    color: #A4A400;
+    background-color: #F0F0F0;
+    font-family: "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+    text-align: center;
+    padding: 5px 10px;
+    text-decoration: underline;
+}
+
+header p {
+    color: #A4A400;
+    font-size: 15pt;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+footer pre {
+    font-family: monospace;
+    padding: 10px;
+}
