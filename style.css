@@ -15,7 +15,7 @@ p {
 }
 
 header {
-    background-color: rgb(84, 123, 173);
+    background-color: rgb(71, 110, 160);
     color: white;
     text-align: center;
     padding: 20px;
@@ -24,7 +24,7 @@ header {
 a {
     display: inline-block;
     padding: 10px 20px;
-    background-color: rgb(84, 123, 173);
+    background-color: rgb(71, 110, 160);
     color: white;
     border-radius: 5px;
     margin-top: 10px;
