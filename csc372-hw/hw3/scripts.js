@@ -63,7 +63,7 @@ function addToMealPlan(event) {
     const dishPrice = parseFloat(dishItem.dataset.price);
 
     const mealList = document.querySelector("#selected-meals");
-    let existingItem = mealList.querySelector(`[data-name="${dishName}"]`);
+    let existingItem = mealList.querySelector('[data-name="' + dishName + '"]');
 
     if (existingItem) {
         let currentPrice = parseFloat(existingItem.dataset.price);
