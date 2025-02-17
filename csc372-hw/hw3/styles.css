@@ -1,0 +1,226 @@
+/*
+  Name: Shauna Ayscue
+  Date: 02.17.2025
+  CSC 372-01
+
+  This is the styles.css for all of my styling for my Dine On Campus website.
+*/
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+button {
+    background: #816e6e;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    background-color: #816e6e;
+    color: white;
+    padding: 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+header h1 {
+    font-size: 40px;
+}
+
+header a {
+    color: lightgray;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+aside {
+    margin-top: 30px;
+    text-align: center;
+    padding: 20px;
+}
+
+aside a {
+    font-size: 18px;
+    color: white;
+    background-color: #816e6e;
+    padding: 12px 24px;
+    border-radius: 8px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    background-color: lightgray;
+    padding: 15px 0;
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+
+.dish-gallery {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.restaurant {
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+}
+
+.dish {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.meal-container .dish {
+    flex-direction: row;
+    padding: 10px;
+    background: #fafafa;
+    border-radius: 8px;
+    white-space: nowrap;
+}
+
+.container {
+    margin: 200px auto;
+    width: 1000px;
+    height: 500px;
+    text-align: center;
+}
+
+.small {
+    margin: 0 10px;
+    border: 1px solid black;
+    width: 72px;
+    height: 48px;
+    object-fit: cover;
+
+}
+
+.big {
+    margin: 0 10px;
+    border: 1px solid black;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.dish p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.meal-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.meal-options,
+.meal-plan {
+    width: 50%;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.meal-options,
+.meal-plan {
+    border: 2px solid #e6e6e6;
+}
+
+.meal-options li,
+.meal-plan li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #fafafa;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+    white-space: nowrap;
+}
+.meal-options li button.add-btn {
+    margin-left: auto;
+    padding: 6px 12px;
+}
+
+button.add-btn {
+    margin-left: 10px;
+}
+
+#intro {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#recommendations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+#recommendations h2 {
+    width: 100%;
+    text-align: center;
+}
+
+#dish-info {
+    text-align: center;
+    padding: 10px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    display: none;
+}
+
+#dish-info #dish-name {
+    font-weight: bold;
+}
