@@ -18,6 +18,7 @@ const dishPrice = document.getElementById('dish-price');
  * and displays additional information about the dish.
  *
  * @param {Event} event - The click event triggered on the dish image.
+ * @return {void} - This function does not return any value.
  */
 function expandImage(event) {
     const clickedImage = event.currentTarget;
@@ -53,7 +54,7 @@ document.querySelectorAll(".add-btn").forEach(button => {
  * Adds the selected dish to the meal plan or updates the existing dish's price.
  *
  * @param {Event} event - The click event triggered on the "Add" button.
- * @return {void}
+ * @return {void} - This function does not return any value.
  */
 let totalPrice = 0;
 
@@ -63,11 +64,16 @@ function addToMealPlan(event) {
     const dishPrice = parseFloat(dishItem.dataset.price);
 
     const mealList = document.querySelector("#selected-meals");
-    let existingItem = mealList.querySelector('[data-name="' + dishName + '"]');
+    let existingItem = mealList.querySelector("[data-name=" + dishName + "]");
 
     if (existingItem) {
+        let quantitySpan = existingItem.querySelector(".quantity");
+        let quantity = parseInt(quantitySpan.textContent) + 1;
+        quantitySpan.textContent = quantity;
+
         let currentPrice = parseFloat(existingItem.dataset.price);
-        existingItem.dataset.price = currentPrice + dishPrice;
+        let updatedPrice = (currentPrice + dishPrice).toFixed(2);
+        existingItem.dataset.price = updatedPrice;
         existingItem.querySelector("span").textContent = dishName;
     } else {
         const mealItem = document.createElement("li");
@@ -77,11 +83,18 @@ function addToMealPlan(event) {
         const textSpan = document.createElement("span");
         textSpan.textContent = dishName;
 
+        const quantitySpan = document.createElement("span");
+        quantitySpan.classList.add("quantity");
+        quantitySpan.textContent = "1";
+
         const removeBtn = document.createElement("button");
         removeBtn.textContent = "Remove";
-        removeBtn.addEventListener("click", () => removeFromMealPlan(mealItem));
+        removeBtn.addEventListener("click", () => {
+            removeFromMealPlan(mealItem);
+        });
 
         mealItem.appendChild(textSpan);
+        mealItem.appendChild(quantitySpan);
         mealItem.appendChild(removeBtn);
         mealList.appendChild(mealItem);
     }
@@ -95,7 +108,7 @@ function addToMealPlan(event) {
  * Removes a meal item from the meal plan and updates the total price.
  *
  * @param {HTMLElement} mealItem - The meal item to be removed from the meal plan.
- * @return {void}
+ * @return {void} - This function does not return any value.
  */
 function removeFromMealPlan(mealItem) {
     const itemPrice = parseFloat(mealItem.dataset.price);
