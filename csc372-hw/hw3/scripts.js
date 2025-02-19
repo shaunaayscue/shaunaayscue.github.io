@@ -1,6 +1,6 @@
 /*
   Name: Shauna Ayscue
-  Date: 02.17.2025
+  Date: 02.18.2025
   CSC 372-01
 
   This is the scripts.js file for the "Dine On UNCG Campus" website. 
@@ -18,7 +18,6 @@ const dishPrice = document.getElementById('dish-price');
  * and displays additional information about the dish.
  *
  * @param {Event} event - The click event triggered on the dish image.
- * @return {void} - This function does not return any value.
  */
 function expandImage(event) {
     const clickedImage = event.currentTarget;
@@ -54,7 +53,7 @@ document.querySelectorAll(".add-btn").forEach(button => {
  * Adds the selected dish to the meal plan or updates the existing dish's price.
  *
  * @param {Event} event - The click event triggered on the "Add" button.
- * @return {void} - This function does not return any value.
+ * @return {void}
  */
 let totalPrice = 0;
 
@@ -64,7 +63,7 @@ function addToMealPlan(event) {
     const dishPrice = parseFloat(dishItem.dataset.price);
 
     const mealList = document.querySelector("#selected-meals");
-    let existingItem = mealList.querySelector("[data-name=" + dishName + "]");
+    let existingItem = mealList.querySelector('[data-name="' + dishName + '"]');
 
     if (existingItem) {
         let quantitySpan = existingItem.querySelector(".quantity");
@@ -108,7 +107,7 @@ function addToMealPlan(event) {
  * Removes a meal item from the meal plan and updates the total price.
  *
  * @param {HTMLElement} mealItem - The meal item to be removed from the meal plan.
- * @return {void} - This function does not return any value.
+ * @return {void}
  */
 function removeFromMealPlan(mealItem) {
     const itemPrice = parseFloat(mealItem.dataset.price);
