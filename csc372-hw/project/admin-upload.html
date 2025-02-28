@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
   Name: Shauna Ayscue
-  Date: 02.26.2025
+  Date: 02.28.2025
   CSC 372-01
 
   This is the admin-upload.html page for the Book Haven website. It can select a file with 
@@ -53,6 +53,7 @@
             </ul>
         </nav>
     </header>
+
     <main>
         <section>
             <h2>Upload Product Data</h2>
@@ -66,41 +67,75 @@
         <section>
             <h3>Accepted File Formats</h3>
             <ul>
-                <li><strong>JSON</strong>: Product data formatted as JSON.</li>
-                <li><strong>CSV</strong>: Comma-separated values file (columns: name, price, isbn, etc.).</li>
-                <li><strong>Text</strong>: Structured plain text file (each product on a new line).</li>
+                <li><strong>JSON</strong>: Product data formatted as a structured JSON array.</li>
+                <li><strong>CSV</strong>: Comma-separated values file where each row represents a product.</li>
+                <li><strong>Text</strong>: Key-value structured plain text file where each attribute is listed on a new
+                    line.</li>
             </ul>
         </section>
 
         <section>
             <h3>File Format Example</h3>
-            <p>Ensure your file follows this format (JSON example):</p>
-            <pre>
+            <p>Ensure your file follows one of these formats:</p>
+
+            <div id="flex-container">
+                <div class="format-example">
+                    <h4>JSON Example</h4>
+                    <pre>
 [
-{
-    "product_id": 1,
-    "name": "The Handmaid's Tale",
-    "image_path": "images/handmaids-tale.jpg",
-    "price": 14.99,
-    "isbn": "9781250",
-    "author": "Margaret Atwood",
-    "category": "Fiction",
-    "pages": 325,
-    "publisher": "RANDOM HOUSE UK",
-    "description": "The Handmaid's Tale by Margaret Atwood is a dystopian novel set in a theocratic society
-    where women are subjugated and used for reproduction, told through the eyes of a woman named Offred,
-    who navigates life under oppressive control and seeks to reclaim her autonomy."
-}
+    {
+        "product_id": 1,
+        "name": "The Handmaid's Tale",
+        "image_path": "images/handmaids-tale.jpg",
+        "price": 14.99,
+        "isbn": "9781250",
+        "author": "Margaret Atwood",
+        "category": "Fiction",
+        "pages": 325,
+        "publisher": "RANDOM HOUSE UK",
+        "description": "The Handmaid's Tale by Margaret Atwood is a dystopian novel set in a theocratic society where women's rights are severely restricted, and they are forced into reproductive roles."
+    }
 ]
-        </pre>
+                    </pre>
+                </div>
+
+                <div class="format-example">
+                    <h4>CSV Example</h4>
+                    <pre>
+product_id,name,image_path,price,isbn,author,category,pages,publisher,description
+1,The Handmaid's Tale,images/handmaids-tale.jpg,14.99,9781250,Margaret Atwood,Fiction,325,RANDOM HOUSE UK,"The Handmaid's Tale by Margaret Atwood is a dystopian novel set in a theocratic society where women's rights are severely restricted, and they are forced into reproductive roles."
+                    </pre>
+                </div>
+
+                <div class="format-example">
+                    <h4>Text Example</h4>
+                    <pre>
+product_id: 1
+name: The Handmaid's Tale
+image_path: images/handmaids-tale.jpg
+price: 14.99
+isbn: 9781250
+author: Margaret Atwood
+category: Fiction
+pages: 325
+publisher: RANDOM HOUSE UK
+description: The Handmaid's Tale by Margaret Atwood is a dystopian novel set in a theocratic society where women's rights are severely restricted, and they are forced into reproductive roles.
+                    </pre>
+                </div>
+            </div>
         </section>
 
         <section>
             <h3>Instructions</h3>
-            <p>Please ensure the file contains the correct product data format. The JSON format should
-                include all the necessary fields. CSV and text files should
-                follow a similar structure.
-            </p>
+            <p>Please ensure that the file you upload follows the correct product data format:</p>
+            <ul>
+                <li><strong>JSON format</strong>: Include all necessary fields for each product (e.g., product_id, name,
+                    price, etc.).</li>
+                <li><strong>CSV and Text formats</strong>: Follow a similar structure as the JSON format, with each
+                    product's data properly separated by commas (CSV) or new lines (Text).</li>
+            </ul>
+            <p>Each format must adhere to the guidelines provided to ensure smooth data upload and integration into the
+                system.</p>
         </section>
     </main>
 

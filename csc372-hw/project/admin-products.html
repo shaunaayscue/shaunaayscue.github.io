@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
   Name: Shauna Ayscue
-  Date: 02.26.2025
+  Date: 02.28.2025
   CSC 372-01
 
   This is the admin-products.html page for the Book Haven website. It includes all listed products
@@ -61,22 +61,23 @@
                     <legend>Product Information</legend>
 
                     <label for="product-id">Product ID:</label>
-                    <input type="text" id="product-id" name="product-id" value="Auto-generated" readonly>
+                    <input type="text" id="product-id" name="product-id" placeholder="(Not editable)" readonly>
 
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" placeholder="Enter product name" required>
 
                     <label for="image">Image Path:</label>
-                    <input type="text" id="image" name="image" required>
+                    <input type="text" id="image" name="image" placeholder="e.g., images/product.jpg" required>
 
                     <label for="price">Price:</label>
-                    <input type="number" id="price" name="price" step="0.01" min="0" required>
+                    <input type="number" id="price" name="price" step="0.01" min="0"
+                        placeholder="Enter price (e.g., 19.99)" required>
 
                     <label for="isbn">ISBN:</label>
-                    <input type="text" id="isbn" name="isbn" required>
+                    <input type="text" id="isbn" name="isbn" placeholder="Enter ISBN" required>
 
                     <label for="author">Author:</label>
-                    <input type="text" id="author" name="author" required>
+                    <input type="text" id="author" name="author" placeholder="Enter author name" required>
 
                     <label for="category">Category Name:</label>
                     <select id="category" name="category" required>
@@ -89,13 +90,14 @@
                     </select>
 
                     <label for="pages">Pages:</label>
-                    <input type="number" id="pages" name="pages" required>
+                    <input type="number" id="pages" name="pages" placeholder="Enter page number" required>
 
                     <label for="publisher">Publisher:</label>
-                    <input type="text" id="publisher" name="publisher" required>
+                    <input type="text" id="publisher" name="publisher" placeholder="Enter publisher name" required>
 
                     <label for="description">Description:</label>
-                    <textarea id="description" name="description" required></textarea>
+                    <textarea id="description" name="description" placeholder="Enter product description"
+                        required></textarea>
 
                     <button type="submit">Create New Product</button>
                 </fieldset>
@@ -114,7 +116,7 @@
                 <button type="submit">Search</button>
             </form>
         </section>
-        
+
         <section>
             <h3>Product List</h3>
             <div id="product-table-container">
@@ -147,12 +149,8 @@
                             <td>RANDOM HOUSE UK</td>
                             <td>
                                 <div class="description-box">
-                                    The Handmaid's Tale by Margaret Atwood is a dystopian novel set in a theocratic
-                                    society where women are subjugated and used for reproduction, told through the eyes
-                                    of a
-                                    woman named Offred, who navigates life under oppressive control and seeks to reclaim
-                                    her
-                                    autonomy.
+                                    The Handmaid's Tale by Margaret Atwood is a dystopian novel about a woman, Offred,
+                                    living in a theocratic society where women are controlled and used for reproduction.
                                 </div>
                             </td>
                             <td class="action-button">
@@ -174,8 +172,8 @@
                             <td>
                                 <div class="description-box">
                                     The Last Ember by Daniel Levin is a gripping archaeological thriller that
-                                    intertwines history,
-                                    mystery, and adventure as an ancient secret is uncovered in Rome.
+                                    intertwines history, mystery, and adventure as an ancient secret is uncovered in
+                                    Rome.
                                 </div>
                             </td>
                             <td class="action-button">
@@ -197,8 +195,7 @@
                             <td>
                                 <div class="description-box">
                                     The Great Gatsby by F. Scott Fitzgerald is a classic novel that explores themes of
-                                    wealth, love, and
-                                    the American Dream through the mysterious figure of Jay Gatsby.
+                                    wealth, love, and the American Dream through the mysterious figure of Jay Gatsby.
                                 </div>
                             </td>
                             <td class="action-button">
@@ -220,8 +217,7 @@
                             <td>
                                 <div class="description-box">
                                     The Alchemist by Paulo Coelho is an inspiring novel about self-discovery and
-                                    following one’s destiny,
-                                    centered around Santiago, a shepherd in search of treasure.
+                                    following one’s destiny, centered around Santiago, a shepherd in search of treasure.
                                 </div>
                             </td>
                             <td class="action-button">
@@ -494,26 +490,26 @@
                             </td>
                         </tr>
                         <tr>
-                        <td>17</td>
-                        <td>Harry Potter and the Sorcerer's Stone</td>
-                        <td>images/harry-potter.jpg</td>
-                        <td>$14.99</td>
-                        <td>911115678</td>
-                        <td>J.K. Rowling</td>
-                        <td>Fantasy</td>
-                        <td>424</td>
-                        <td>Large Print Press</td>
-                        <td>
-                            <div class="description-box">
-                                Harry Potter and the Sorcerer's Stone by J.K. Rowling follows a young boy who
-                                discovers he is a wizard and attends Hogwarts School of Witchcraft and Wizardry.
-                            </div>
-                        </td>
-                        <td class="action-button">
-                            <a href=" product-edit.html" class="button-link">Edit</a>
-                            <button class="delete-button">Delete</button>
-                            <button class="archive-button">Archive</button>
-                        </td>
+                            <td>17</td>
+                            <td>Harry Potter and the Sorcerer's Stone</td>
+                            <td>images/harry-potter.jpg</td>
+                            <td>$14.99</td>
+                            <td>911115678</td>
+                            <td>J.K. Rowling</td>
+                            <td>Fantasy</td>
+                            <td>424</td>
+                            <td>Large Print Press</td>
+                            <td>
+                                <div class="description-box">
+                                    Harry Potter and the Sorcerer's Stone by J.K. Rowling follows a young boy who
+                                    discovers he is a wizard and attends Hogwarts School of Witchcraft and Wizardry.
+                                </div>
+                            </td>
+                            <td class="action-button">
+                                <a href=" product-edit.html" class="button-link">Edit</a>
+                                <button class="delete-button">Delete</button>
+                                <button class="archive-button">Archive</button>
+                            </td>
                         </tr>
                         <tr>
                             <td>18</td>
@@ -579,7 +575,7 @@
                                 <a href="product-edit.html" class="button-link">Edit</a>
                                 <button class="delete-button">Delete</button>
                                 <button class="archive-button">Archive</button>
-                            </td>                            
+                            </td>
                         </tr>
                     </tbody>
                 </table>

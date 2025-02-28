@@ -44,10 +44,6 @@ ul li {
     color: #555;
 }
 
-section p {
-    text-align: center;
-}
-
 footer p {
     margin: 0;
 }
@@ -162,10 +158,32 @@ input[type="number"] {
     margin: 10px auto;
 }
 
+.format-example {
+    flex: 1 1 30%; 
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    max-height: 400px; 
+    overflow-y: auto; 
+}
+
+#flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px;
+    box-sizing: border-box;
+}
+
 #product-id,
 #price,
 #pages {
-    width: 150px;
+    width: 205px;
 }
 
 #logo-container {
@@ -261,7 +279,6 @@ input[type="number"] {
 #dropdown:hover #dropdown-content {
     display: block;
 }
-
 
 #search-container {
     display: flex;
