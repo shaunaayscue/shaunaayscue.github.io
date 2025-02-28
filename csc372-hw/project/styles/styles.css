@@ -323,6 +323,7 @@ button {
 #search-container {
     display: flex;
     padding: 20px 40px;
+    justify-content: flex-end;
 }
 
 #search-container input {
