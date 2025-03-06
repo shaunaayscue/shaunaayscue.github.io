@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+  Name: Shauna Ayscue
+  Date: 03.05.2025
+  CSC 372-01
+
+  This is building a simple rock-paper-scissors game on a single web page, which lets the user play against the computer. 
+  On the user’s turn, they will pick their throw by clicking one of the 3 choices, rock, paper, or scissors.
+  On the computer’s turn, a random choice will be made by the computer, then a winner will be determined.
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <h1>ROCK PAPER SCISSORS GAME, GO!</h1>
+
+    <div id="player-throw">
+        <div id="choices">
+            <figure>
+                <img src="rock.png" alt="Rock" data-choice="rock">
+            </figure>
+            <figure>
+                <img src="paper.png" alt="Paper" data-choice="paper">
+            </figure>
+            <figure>
+                <img src="scissors.png" alt="Scissors" data-choice="scissors">
+            </figure>
+        </div>
+        <h2>YOUR THROW</h2>
+    </div>
+
+    <div id="computer-throw">
+        <img src="question-mark.png" alt="Question Mark">
+        <h2>COMPUTER THROW</h2>
+    </div>
+
+    <div id="outcome">
+        <h3>RESULTS, </h3>
+        <p id="results"></p>
+    </div>
+
+    <div id="score-container">
+        <h2>SCORE</h2>
+        <p id="score">Wins: 0, Losses: 0, Ties: 0</p>
+        <button id="reset">Reset</button>
+    </div>
+</body>
+
+</html>
