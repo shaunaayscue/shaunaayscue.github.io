@@ -47,7 +47,7 @@ function computerThrow(playerThrow) {
 
     /** Shuffles the computer's choice. */
     function shuffleChoices() {
-        computerImg.src = choices[index] + ".png";
+        computerImg.src = choices[index] + ".PNG";
         index = (index + 1) % choices.length;
     }
 
@@ -60,7 +60,7 @@ function computerThrow(playerThrow) {
 
         let computerThrow = choices[Math.floor(Math.random() * choices.length)];
 
-        computerImg.src = computerThrow + ".png";
+        computerImg.src = computerThrow + ".PNG";
         computerImg.style.border = "3px solid blue";
 
         winnerOutcome(playerThrow, computerThrow);
@@ -110,7 +110,7 @@ function resetAll() {
 
     trackScore();
 
-    computerImg.src = "question-mark.png";
+    computerImg.src = "question-mark.PNG";
     computerImg.style.border = "3px solid transparent";
 
     for (let index = 0; index < playerImages.length; index++) {
