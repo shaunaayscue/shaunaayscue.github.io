@@ -15,10 +15,6 @@ button:hover {
     background-color: #dfdada;
 }
 
-.selected {
-    border: 3px solid red !important;
-}
-
 #choices figure {
     text-align: center;
 }
