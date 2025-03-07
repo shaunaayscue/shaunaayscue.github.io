@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
   Name: Shauna Ayscue
-  Date: 03.05.2025
+  Date: 03.07.2025
   CSC 372-01
 
   This is building a simple rock-paper-scissors game on a single web page, which lets the user play against the computer. 
@@ -21,7 +21,7 @@
 <body>
     <h1>ROCK PAPER SCISSORS GAME, GO!</h1>
 
-    <div id="player-throw">
+    <section id="player-throw">
         <div id="choices">
             <figure>
                 <img src="rock.PNG" alt="Rock" data-choice="rock">
@@ -34,23 +34,23 @@
             </figure>
         </div>
         <h2>YOUR THROW</h2>
-    </div>
+    </section>
 
-    <div id="computer-throw">
+    <section id="computer-throw">
         <img src="question-mark.PNG" alt="Question Mark">
         <h2>COMPUTER THROW</h2>
-    </div>
+    </section>
 
-    <div id="outcome">
+    <section id="outcome">
         <h3>RESULTS, </h3>
         <p id="results"></p>
-    </div>
+    </section>
 
-    <div id="score-container">
+    <section id="score-container">
         <h2>SCORE</h2>
         <p id="score">Wins: 0, Losses: 0, Ties: 0</p>
-        <button id="reset">Reset</button>
-    </div>
+        <button type="button" id="reset">Reset</button>
+    </section>
 </body>
 
 </html>

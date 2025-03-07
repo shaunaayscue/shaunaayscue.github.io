@@ -23,7 +23,7 @@ function onClick(event) {
  * @param {HTMLElement} elem - The DOM element representing the choice.
  */
 function playerThrow(choice, elem) {
-    
+
     computerImg.style.border = "none";
 
     for (let index = 0; index < playerImages.length; index++) {
@@ -36,27 +36,27 @@ function playerThrow(choice, elem) {
 }
 
 /**
- * Simulates the computer's throw and displays the choices in sequence.
+ * Does the computer's throw and displays the choices.
  * @param {string} playerThrow - The player's choice (rock, paper, or scissors).
  */
 function computerThrow(playerThrow) {
     const choices = ["rock", "paper", "scissors"];
     let index = 0;
 
-    let shuffleInterval = setInterval(shuffleChoices, 500);
+    let shuffleInterval = setInterval(shuffleComputerImg, 500);
 
     /** Shuffles the computer's choice. */
-    function shuffleChoices() {
+    function shuffleComputerImg() {
         computerImg.src = choices[index] + ".PNG";
         index = (index + 1) % choices.length;
     }
 
-    let computerTimeout = setTimeout(chosenThrowImage, 3000);
+    let computerThinking = setTimeout(chosenThrowImage, 3000);
 
     /** Picks the computer's final throw after shuffling. */
     function chosenThrowImage() {
         clearInterval(shuffleInterval);
-        clearTimeout(computerTimeout);
+        clearTimeout(computerThinking);
 
         let computerThrow = choices[Math.floor(Math.random() * choices.length)];
 
@@ -100,8 +100,13 @@ function winnerOutcome(player, computer) {
     trackScore();
 }
 
+resetBtn.addEventListener("click", resetAll);
+
 /** Resets the game to its initial state, clearing all counters and displays. */
 function resetAll() {
+
+    document.getElementById("results").textContent = "";
+
     score = {
         wins: 0,
         losses: 0,
@@ -123,6 +128,5 @@ function trackScore() {
     scoreCount.textContent = "Wins: " + score.wins + ", Losses: " + score.losses + ", Ties: " + score.ties;
 }
 
-resetBtn.addEventListener("click", resetAll);
 
 
