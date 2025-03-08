@@ -116,7 +116,7 @@ function resetAll() {
     trackScore();
 
     computerImg.src = "question-mark.PNG";
-    computerImg.style.border = "3px solid transparent";
+    computerImg.style.border = "none";
 
     for (let index = 0; index < playerImages.length; index++) {
         playerImages[index].style.border = "none";
