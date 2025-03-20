@@ -3,7 +3,7 @@ body {
 }
 
 header {
-    background-color:rgb(189, 167, 138);
+    background-color:rgb(196, 161, 115);
     color: white;
     padding: 15px;
     font-size: 24px;
@@ -27,7 +27,6 @@ button {
 .repo-card {
     background-color: lightgray;
     padding: 15px;
-    border-radius: 8px;
     text-align: left;
     display: flex;
     flex-direction: column;
