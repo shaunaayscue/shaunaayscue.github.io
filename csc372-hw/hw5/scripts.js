@@ -71,16 +71,16 @@ async function fetchRepos(githubUsername) {
             watchersNumber.textContent = "Watchers: " + repo.watchers_count;
             repository.appendChild(watchersNumber);
 
-            let langResponse = await fetch(repo.languages_url);
-            let languages = await langResponse.json();
+            let langRes = await fetch(repo.languages_url);
+            let languages = await langRes.json();
             let languageList = Object.keys(languages).join(", ");
-            let languageInfo = document.createElement("p");
-            languageInfo.textContent = "Languages: " + languageList;
-            repository.appendChild(languageInfo);
+            let languageTypes = document.createElement("p");
+            languageTypes.textContent = "Languages: " + languageList;
+            repository.appendChild(languageTypes);
 
             let commitNumber = document.createElement("p");
-            let commitsResponse = await fetch("https://api.github.com/repos/" + githubUsername + "/" + repo.name + "/commits");
-            let commits = await commitsResponse.json();
+            let commitRes = await fetch("https://api.github.com/repos/" + githubUsername + "/" + repo.name + "/commits");
+            let commits = await commitRes.json();
             let commitCount = 0;
             if (Array.isArray(commits)) {
                 commitCount = commits.length;
