@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+  Name: Shauna Ayscue
+  Date: 03.20.2025
+  CSC 372-01
+
+  This index.html uses the fetch API by building a GitHub Gallery page 
+  using data from a user’s GitHub repositories with the GitHub API.
+  Each entry includes the repository name, description, creation date,
+  update date, number of commits, list of languages, and the number of watchersNumber, and a search field.
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Gallary</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>GitHub Gallery</h1>
+    </header>
+
+    <main>
+        <div id="search-container">
+            <input type="text" id="github-username" placeholder="Enter a GitHub Username">
+            <button type="button" id="search-btn">Search</button>
+        </div>
+
+        <div id="repo-container">
+        </div>
+    </main>
+</body>
+
+</html>

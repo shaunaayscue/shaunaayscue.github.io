@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--
+  Name: Shauna Ayscue
+  Date: 02.18.2025
+  CSC 372-01
+
+  This is the meal plan HTML page for the "Dine On UNCG Campus" website. It displays a list of recommended dishes to the left of the page, and 
+  the meal plan to the right Chick-fil-A, Buffalo Wild Wings Go, and Panda Express.
+  You can add a dish and diplay that toal dollar amount, and remove the dish.
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Plan</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>UNCG Meal Plan</h1>
+        <nav>
+            <a href="index.html">Back to Main Page</a>
+        </nav>
+    </header>
+
+    <main class="meal-container">
+        <section class="dish-list">
+            <h2>Recommended Dishes</h2>
+
+            <article>
+                <h3>Chick-fil-A</h3>
+                <ul class="dish-menu">
+                    <li class="dish" data-name="Chicken Sandwich" data-price="5.99">
+                        Chicken Sandwich - $5.99 <button class="add-btn">Add</button>
+                    </li>
+                    <li class="dish" data-name="Waffle Fries" data-price="2.99">
+                        Waffle Fries - $2.99 <button class="add-btn">Add</button>
+                    </li>
+                    <li class="dish" data-name="Vanilla Milkshake" data-price="3.99">
+                        Vanilla Milkshake - $3.99 <button class="add-btn">Add</button>
+                    </li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Buffalo Wild Wings</h3>
+                <ul class="dish-menu">
+                    <li class="dish" data-name="6 pc Original Buffalo Traditional Wings" data-price="10.99">
+                        6 pc Original Buffalo Traditional Wings - $10.99 <button class="add-btn">Add</button>
+                    </li>
+                    <li class="dish" data-name="10 pc Boneless Honey BBQ Wings" data-price="12.99">
+                        10 pc Boneless Honey BBQ Wings - $12.99 <button class="add-btn">Add</button>
+                    </li>
+                    <li class="dish" data-name="Mozzarella Sticks" data-price="7.99">
+                        Mozzarella Sticks - $7.99 <button class="add-btn">Add</button>
+                    </li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Panda Express</h3>
+                <ul class="dish-menu">
+                    <li class="dish" data-name="The Original Orange Chicken" data-price="7.99">
+                        The Original Orange Chicken - $7.99 <button class="add-btn">Add</button>
+                    </li>
+                    <li class="dish" data-name="Fried Rice" data-price="4.99">
+                        Fried Rice - $4.99 <button class="add-btn">Add</button>
+                    </li>
+                    <li class="dish" data-name="Chicken Egg Roll" data-price="4.99">
+                        Chicken Egg Roll - $4.99 <button class="add-btn">Add</button>
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <aside class="meal-plan">
+            <h2>Your Meal Plan</h2>
+            <ul id="selected-meals"></ul>
+            <h3>Total: $<span id="total-price">0.00</span></h3>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Dine On UNCG Campus &copy; 2025</p>
+    </footer>
+</body>
+
+</html>
