@@ -47,7 +47,7 @@ function createNew(req, res, next) {
 
 function deleteProduct(req, res, next) {
     try {
-        adminModel.deleteProduct(req.params.id);
+        adminModel.deleteProduct(req.params.product_id);
         res.json(model.getAllProducts());
     } catch (err) {
         console.error("Error while getting product: ", err.message);
@@ -56,7 +56,7 @@ function deleteProduct(req, res, next) {
 }
 
 function editProduct(req, res, next) {
-    let product_id = req.params.id;
+    let product_id = req.params.product_id;
     let product_name = req.body.product_name;
     let description = req.body.description;
     let image_url = req.body.image_url;

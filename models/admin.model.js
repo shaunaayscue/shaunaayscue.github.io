@@ -9,9 +9,9 @@ function createNew(params) {
     return info;
 }
 
-function deleteProduct(id) {
+function deleteProduct(product_id) {
     let sql = "DELETE FROM Products WHERE product_id =? ; ";
-    const info = db.run(sql, id);
+    const info = db.run(sql, product_id);
     return info;
 }
 
