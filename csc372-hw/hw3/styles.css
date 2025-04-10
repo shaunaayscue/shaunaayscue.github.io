@@ -1,0 +1,295 @@
+/*
+  Name: Shauna Ayscue
+  Date: 02.18.2025
+  CSC 372-01
+
+  This is the styles.css for all of my styling for my Dine On Campus website.
+*/
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+h3 {
+    font-size: 28px; 
+    color: #292f42;
+    margin-bottom: 15px;
+}
+
+button {
+    background: #808ea0;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;  
+    cursor: pointer;
+    border-radius: 8px;
+    white-space: nowrap; 
+}
+
+header {
+    text-align: center;
+    background: linear-gradient(135deg, #808ea0, #b9bfd1); 
+    color: white;
+    padding: 30px 20px;
+    font-size: 28px;
+    font-weight: bold;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); 
+}
+
+header h1 {
+    font-size: 50px;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+header a {
+    color: #f1f1f1;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+aside {
+    margin-top: 30px;
+    text-align: center;
+    padding: 20px;
+}
+
+aside a {
+    font-size: 18px;
+    color: white;
+    background-color: #808ea0;
+    padding: 12px 24px;
+    border-radius: 8px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    background-color: lightgray;
+    padding: 15px 0;
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #292f42;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.hours-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.hours-list div {
+    padding: 8px;
+    background-color: #eaeaea;
+    border-radius: 6px;
+}
+
+.hours-list strong {
+    color: #333;
+}
+
+.dish p {
+    font-size: 18px;
+    color: #5a5a5a;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.dish p.description {
+    font-size: 14px;
+    color: #999;
+    font-style: italic;
+}
+
+.dish-gallery {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.restaurant {
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+}
+
+.restaurant p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: justify;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    padding: 15px;
+    border-left: 5px solid #808ea0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.meal-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 30px;
+}
+
+.dish {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.meal-container .dish {
+    flex-direction: row;
+    padding: 10px;
+    background: #fafafa;
+    border-radius: 8px;
+    white-space: nowrap;
+}
+
+.small, .big {
+    margin: 0 10px;
+    border: 1px solid black;
+    object-fit: cover;
+}
+
+.small {
+    width: 100px;
+    height: 90px;
+}
+
+.big {
+    width: 300px;
+    height: 200px;
+}
+
+.dish-list, .meal-plan, .meal-options {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.meal-options,
+.meal-plan {
+    width: 50%;
+    border: 2px solid #e6e6e6;
+}
+
+.meal-options li, .meal-plan li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #fafafa;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+    white-space: nowrap;
+}
+
+.meal-options li button.add-btn,
+button.add-btn {
+    margin-left: 10px;
+}
+
+#intro {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px 20px; 
+    background: linear-gradient(135deg, #808ea0, #b9bfd1);
+    border-radius: 20px;
+}
+
+#intro h2 {
+    font-size: 35px;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+#intro p {
+    font-size: 20px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    max-width: 860px;
+    margin: auto;
+}
+
+#recommendations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+#recommendations h2 {
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 40px;
+}
+
+#dish-info {
+    text-align: center;
+    padding: 10px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    display: none;
+}
+
+#dish-info #dish-name {
+    font-weight: bold;
+}

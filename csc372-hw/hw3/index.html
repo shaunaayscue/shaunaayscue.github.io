@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!--
+  Name: Shauna Ayscue
+  Date: 02.18.2025
+  CSC 372-01
+
+  This is the main HTML page for the "Dine On UNCG Campus" website. It displays a list of food recommendations
+  from nearby restaurants along with their hours of operation and dish details. The page includes sections for Chick-fil-A, Buffalo Wild Wings Go, 
+  and Panda Express, along with the link to create a meal plan.
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dine On UNCG Campus</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Dine On UNCG Campus</h1>
+    </header>
+
+    <main>
+        <section id="intro">
+            <h2>Welcome Food Lovers!
+            </h2>
+            <p>
+                Are you a foodie on the hunt for the tastiest meals on campus? Your search ends here! We've handpicked
+                a selection of the most delicious dishes guaranteed to satisfy your cravings. From crispy fried chicken
+                to savory wings and fried rice, there's something for everyone. Get ready to savor and explore
+                incredible flavors!
+            </p>
+        </section>
+
+        <aside>
+            <a href="meal-plan.html">Create Your Meal Plan</a>
+        </aside>
+
+        <section id="recommendations">
+            <h2>Restaurant Recommendations</h2>
+
+            <div id="dish-info">
+                <p id="dish-name"></p>
+                <p id="dish-description"></p>
+                <p id="dish-price"></p>
+            </div>
+
+            <article class="restaurant">
+                <h3>Chick-fil-A</h3>
+                <p>Located in the Elliot University Center, 507 Sterling Street. Chick-fil-A is known for its classic
+                    chicken sandwiches, waffle fries, and milkshakes. Whether you're grabbing a quick snack between
+                    classes
+                    or enjoying a meal with friends, Chick-fil-A offers a delicious dining experience.</p>
+                    <p>Order online for a fast and convenient pickup!</p>
+                    <section class="hours">
+                    <h2>Hours</h2>
+                    <div class="hours-list">
+                        <div><strong>Monday:</strong> 7:30am - 10:00pm</div>
+                        <div><strong>Tuesday:</strong> 7:30am - 10:00pm</div>
+                        <div><strong>Wednesday:</strong> 7:30am - 10:00pm</div>
+                        <div><strong>Thursday:</strong> 7:30am - 10:00pm</div>
+                        <div><strong>Friday:</strong> 7:30am - 8:00pm</div>
+                        <div><strong>Saturday:</strong> 10:30am - 6:00pm</div>
+                        <div><strong>Sunday:</strong> Closed</div>
+                    </div>
+                </section>
+
+                <div class="dish-gallery">
+                    <div class="dish" data-name="Chicken Sandwich" data-price="$5.99"
+                        data-description="A crispy, golden-brown chicken sandwich served with pickles and a toasted bun.">
+                        <img class="small" src="images/sandwich.jpg" alt="Chicken Sandwich">
+                        <p>Chicken Sandwich</p>
+                    </div>
+                    <div class="dish" data-name="Waffle Fries" data-price="$2.99"
+                        data-description="Crispy waffle fries cooked to perfection, lightly salted.">
+                        <img class="small" src="images/fries.jpg" alt="Waffle Fries">
+                        <p>Waffle Fries</p>
+                    </div>
+                    <div class="dish" data-name="Vanilla Milkshake" data-price="$3.99"
+                        data-description="A creamy vanilla milkshake topped with whipped cream and a cherry.">
+                        <img class="small" src="images/milkshake.jpg" alt="Vanilla Milkshake">
+                        <p>Vanilla Milkshake</p>
+                    </div>
+                    <p>All image credits: <a href="https://www.chick-fil-a.com" target="_blank"
+                            rel="noopener noreferrer">Courtesy of Chick-fil-A</a></p>
+                </div>
+            </article>
+
+            <article class="restaurant">
+                <h3>Buffalo Wild Wings Go</h3>
+                <p>Located in the Elliot University Center, 507 Sterling Street. Known for its wings and wide selection
+                    of sauces, Buffalo Wild Wings is just a short walk away. It's perfect for casual meals with friends,
+                    watching games, or trying new flavors!</p>
+                <p>Don’t forget, you can pay with Flex Dollars—perfect for a satisfying meal between classes!</p>
+                <section class="hours">
+                    <h2>Hours</h2>
+                    <div class="hours-list">
+                        <div><strong>Monday:</strong> 10:30am - 11:00pm</div>
+                        <div><strong>Tuesday:</strong> 10:30am - 11:00pm</div>
+                        <div><strong>Wednesday:</strong> 10:30am - 11:00pm</div>
+                        <div><strong>Thursday:</strong> 10:30am - 11:00pm</div>
+                        <div><strong>Friday:</strong> 10:30am - 3:00pm</div>
+                        <div><strong>Saturday:</strong> Closed</div>
+                        <div><strong>Sunday:</strong> 6:00pm - 10:00pm</div>
+                    </div>
+                </section>
+
+                <div class="dish-gallery">
+                    <div class="dish" data-name="6 pc Original Buffalo Traditional Wings" data-price="$10.99"
+                        data-description="Six pieces of crispy, golden-brown traditional wings tossed in original Buffalo sauce.">
+                        <img class="small" src="images/traditional-wings.jpg" alt="Traditional Wings">
+                        <p>6 pc Original Buffalo Traditional Wings</p>
+                    </div>
+                    <div class="dish" data-name="10 pc Boneless Honey BBQ Wings" data-price="$12.99"
+                        data-description="Ten boneless wings tossed in a sweet and smoky Honey BBQ sauce.">
+                        <img class="small" src="images/boneless-wings.jpg" alt="Boneless Wings">
+                        <p>10 pc Boneless Honey BBQ Wings</p>
+                    </div>
+                    <div class="dish" data-name="Mozzarella Sticks" data-price="$7.99"
+                        data-description="Crispy breaded mozzarella sticks served with marinara sauce.">
+                        <img class="small" src="images/mozzarella-sticks.jpg" alt="Mozzarella Sticks">
+                        <p>Mozzarella Sticks</p>
+                    </div>
+                    <p>All image credits: <a href="https://www.buffalowildwings.com/" target="_blank"
+                            rel="noopener noreferrer">Courtesy of Buffalo Wild Wings</a></p>
+                </div>
+            </article>
+
+            <article class="restaurant">
+                <h3>Panda Express</h3>
+                <p>Located in the William E. Moran Commons and Plaza, 1209 North Drive. Panda Express offers a letiety
+                    of flavorful Chinese-American dishes. Whether you're craving a quick bite or a hearty meal, Panda
+                    Express has something for everyone.</p>
+                <p>Pay with flex for a fast and easy experience!</p>
+                <section class="hours">
+                    <h2>Hours</h2>
+                    <div class="hours-list">
+                        <div class="day"><strong>Monday:</strong> <span>11:00am - 9:00pm</span></div>
+                        <div class="day"><strong>Tuesday:</strong> <span>11:00am - 9:00pm</span></div>
+                        <div class="day"><strong>Wednesday:</strong> <span>11:00am - 9:00pm</span></div>
+                        <div class="day"><strong>Thursday:</strong> <span>11:00am - 9:00pm</span></div>
+                        <div class="day"><strong>Friday:</strong> <span>11:00am - 7:00pm</span></div>
+                        <div class="day"><strong>Saturday:</strong> <span>Closed</span></div>
+                        <div class="day"><strong>Sunday:</strong> <span>4:00pm - 9:00pm</span></div>
+                    </div>
+                </section>
+
+                <div class="dish-gallery">
+                    <div class="dish" data-name="The Original Orange Chicken" data-price="$7.99"
+                        data-description="Crispy, sweet, and tangy orange-flavored chicken tossed in a signature sauce.">
+                        <img class="small" src="images/orange-chicken.jpg" alt="Orange Chicken">
+                        <p>The Original Orange Chicken</p>
+                    </div>
+                    <div class="dish" data-name="Fried Rice" data-price="$4.99"
+                        data-description="Classic fried rice with eggs, peas, carrots, and soy sauce for a flavorful side.">
+                        <img class="small" src="images/fried-rice.jpg" alt="Fried Rice">
+                        <p>Fried Rice</p>
+                    </div>
+                    <div class="dish" data-name="Chicken Egg Roll" data-price="$4.99"
+                        data-description="A savory roll filled with a crispy, golden-brown wrapper filled with seasoned chicken, cabbage, and other vegetables.">
+                        <img class="small" src="images/chicken-roll.jpg" alt="Egg Roll">
+                        <p>Chicken Egg Roll</p>
+                    </div>
+                    <p>All image credits: <a href="https://www.pandaexpress.com/" target="_blank"
+                            rel="noopener noreferrer">Courtesy of Panda Express</a></p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Dine On UNCG Campus &copy; 2025</p>
+    </footer>
+</body>
+
+</html>
